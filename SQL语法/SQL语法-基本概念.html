@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿东的知识库</title>
+    <link rel="stylesheet" href="../css(所有网页公共样式表).css">
+
+
+    <style>
+        .div1{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- 头部区域 -->
+    <div class="header">
+        <h1>阿东的知识库</h1>
+    </div>
+    <!-- 开启弹性布局 -->
+    <div class="container">
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+           
+            <div id="target"></div>
+        
+
+        </div>
+
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <div class="div1">
+                <h2>终端与关系型数据库系统的交互图</h3>
+                <img src="C:\Users\rzd28\Downloads\终端与关系型数据库系统的交互图.png" width="600">
+                <hr>
+            </div>
+
+            <h3>SQL语言的基本概念</h3>
+            <p>SQL语言建立起了<b>终端与关系型数据库系统两者之间的桥梁</b>，终端可以通过SQL语言来<b>驱动关系型数据库系统</b>来管理数据库中的表。</p>
+             
+        </div>
+           
+    </body>
+
+
+    <script>
+async function loadHtmlFile(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
+        const htmlContent = await response.text();
+        document.getElementById('target').innerHTML = htmlContent;
+    } catch (error) {
+        console.error('加载文件失败:', error);
+    }
+}
+
+// 加载另一个HTML文件
+loadHtmlFile('./SQL语法(公共导航栏).html');
+</script>
+
+   
+
+</html>
+
+
+
+
